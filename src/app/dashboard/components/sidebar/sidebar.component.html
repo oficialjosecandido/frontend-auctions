@@ -1,0 +1,27 @@
+<nav class="col-md-2 d-md-block bg-light sidebar">
+    <div class="sidebar-sticky">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="../my-profile">
+            <i class="fas fa-user"></i>My Profile
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/balance">
+            <i class="fas fa-car"></i>Balance
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/listings">
+            <i class="fas fa-list"></i>Listings
+          </a>
+        </li>
+        <!-- Calling SignOut() Api from AuthService -->
+        <li class="nav-item">
+          <a class="nav-link" (click)="authService.SignOut()">
+            <i class="fas fa-sign-out-alt"></i>Log out
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
