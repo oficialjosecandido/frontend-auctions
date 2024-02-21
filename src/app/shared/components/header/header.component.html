@@ -1,0 +1,53 @@
+<!-- header.component.html -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/">ecoAucions</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/">{{ 'home' | translate }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about">{{ 'about' | translate }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/services">{{ 'services' | translate }}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact">{{ 'contact' | translate }}</a>
+        </li>
+
+        <li class="nav-item">
+          <div class="dropdown">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {{ selectedLanguageFlag() }} {{ selectedLanguageCode() }}
+            </button>
+            <div class="dropdown-menu" aria-labelledby="languageDropdown">
+              <a class="dropdown-item" (click)="changeLanguage('en')">🇺🇸 EN</a>
+              <a class="dropdown-item" (click)="changeLanguage('pt')">🇵🇹 PT</a>
+              <a class="dropdown-item" (click)="changeLanguage('fr')">🇫🇷 FR</a>
+              <a class="dropdown-item" (click)="changeLanguage('es')">🇪🇸 ES</a>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <button class="btn btn-light" *ngIf="!isLoggedIn" (click)="login()">
+            <i class="bx bx-user"></i> {{ 'login' | translate }}
+          </button>
+          <button class="btn btn-light" *ngIf="isLoggedIn" (click)="logout()">
+            <i class="bi bi-person"></i> {{ 'logout' | translate }}
+          </button>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
