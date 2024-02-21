@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/josecandido/.nvm/versions/node/v18.18.2/bin/node /Users/josecandido/.nvm/versions/node/v16.19.1/bin/yarn add ngx-boostrap
+  /Users/josecandido/.nvm/versions/node/v18.18.2/bin/node /Users/josecandido/.nvm/versions/node/v16.19.1/bin/yarn add bootsrap-icons
 
 PATH: 
   /Users/josecandido/.nvm/versions/node/v18.18.2/bin:/Users/josecandido/.nvm/versions/node/v16.19.1/bin:/opt/homebrew/bin:/Users/josecandido/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/3.11/bin:/Library/Frameworks/Python.framework/Versions/3.10/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/josecandido/.nvm/versions/node/v16.19.1/bin:/opt/homebrew/bin:/Users/josecandido/.pyenv/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/3.11/bin:/Library/Frameworks/Python.framework/Versions/3.10/bin:/Users/josecandido/.rvm/bin:/Users/josecandido/.rvm/bin
@@ -14,7 +14,7 @@ Platform:
   darwin arm64
 
 Trace: 
-  Error: https://registry.npmjs.org/ngx-boostrap: Not found
+  Error: https://registry.npmjs.org/bootsrap-icons: Not found
       at params.callback [as _callback] (/Users/josecandido/.nvm/versions/node/v16.19.1/lib/node_modules/yarn/lib/cli.js:66145:18)
       at self.callback (/Users/josecandido/.nvm/versions/node/v16.19.1/lib/node_modules/yarn/lib/cli.js:140890:22)
       at Request.emit (node:events:517:28)
@@ -48,9 +48,12 @@ npm manifest:
       "@angular/platform-browser": "~16.1.5",
       "@angular/platform-browser-dynamic": "~16.1.5",
       "@angular/router": "~16.1.5",
+      "@ngx-translate/core": "^15.0.0",
+      "@ngx-translate/http-loader": "^8.0.0",
       "@popperjs/core": "^2.11.8",
       "bootstrap": "^5.3.0",
       "firebase": "^9.16.0",
+      "ngx-bootstrap": "^12.0.0",
       "rxjs": "~7.8.1",
       "tslib": "^2.6.0",
       "zone.js": "~0.13.1"
@@ -1988,6 +1991,16 @@ Lockfile:
     version "16.1.8"
     resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-16.1.8.tgz#61e12e4a70101333c9689755c8d47673ca987bfc"
     integrity sha512-co2SC1a822655Ek2f6fkMFsswHeCm2obNceb0kftLSpqomCgPAC3T447pB3TE1Iw+BEMFdjrAgIrp3nyYWwHsQ==
+  
+  "@ngx-translate/core@^15.0.0":
+    version "15.0.0"
+    resolved "https://registry.yarnpkg.com/@ngx-translate/core/-/core-15.0.0.tgz#0fe55b9bd47e75b03d1123658f15fb7b5a534f3c"
+    integrity sha512-Am5uiuR0bOOxyoercDnAA3rJVizo4RRqJHo8N3RqJ+XfzVP/I845yEnMADykOHvM6HkVm4SZSnJBOiz0Anx5BA==
+  
+  "@ngx-translate/http-loader@^8.0.0":
+    version "8.0.0"
+    resolved "https://registry.yarnpkg.com/@ngx-translate/http-loader/-/http-loader-8.0.0.tgz#e02c25dbe33c6b1edee73e3654ab8a161572cdfb"
+    integrity sha512-SFMsdUcmHF5OdZkL1CHEoSAwbP5EbAOPTLLboOCRRoOg21P4GJx+51jxGdJeGve6LSKLf4Pay7BkTwmE6vxYlg==
   
   "@nodelib/fs.scandir@2.1.5":
     version "2.1.5"
@@ -5341,6 +5354,13 @@ Lockfile:
     version "2.6.2"
     resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
     integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
+  
+  ngx-bootstrap@^12.0.0:
+    version "12.0.0"
+    resolved "https://registry.yarnpkg.com/ngx-bootstrap/-/ngx-bootstrap-12.0.0.tgz#fc1c7f74aef3d098cf5ca458121e28d3790eedff"
+    integrity sha512-6/Hs+FT6peMc+Y2uiOm3IawG06Jh3gLQwwKRBF0U1OMlRbpx4KIyHS9GpZtMevtZaBsCRNfHKiSxwsnvn9wx0Q==
+    dependencies:
+      tslib "^2.3.0"
   
   nice-napi@^1.0.2:
     version "1.0.2"

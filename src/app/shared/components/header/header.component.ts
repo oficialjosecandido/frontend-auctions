@@ -8,6 +8,8 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class HeaderComponent implements OnInit {
 
+  public isLoggedIn: boolean = false; 
+
   constructor(private translate: TranslateService) {}
 
   public ngOnInit(): void {
@@ -27,6 +29,16 @@ export class HeaderComponent implements OnInit {
   public changeLanguage(lang: string): void {
     this.translate.use(lang);
     localStorage.setItem('selectedLanguage', lang);
+  }
+
+  selectedLanguageFlag(): string {
+    // You can implement logic to return the flag based on the selectedLanguage
+    return '🇺🇸'; // Default to US flag for English
+  }
+
+  selectedLanguageCode(): string {
+    // You can implement logic to return the code based on the selectedLanguage
+    return 'EN'; // Default to English
   }
   
 
