@@ -1,17 +1,33 @@
-import { Component, ViewChild } from '@angular/core';
-import { MatSidenav } from '@angular/material/sidenav';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
 
-  @ViewChild('sidenav') sidenav: MatSidenav;
+  constructor(private translate: TranslateService) {}
 
-  toggleSidenav() {
-    this.sidenav.toggle();
+  public ngOnInit(): void {
+    this.getLanguage();
   }
+
+  private getLanguage(): void {
+    const savedLang = localStorage.getItem('selectedLanguage');
+    if (savedLang) {
+      this.translate.use(savedLang);
+    } else {
+      this.translate.setDefaultLang('en');
+      this.translate.use('en');
+    }
+  }
+
+  public changeLanguage(lang: string): void {
+    this.translate.use(lang);
+    localStorage.setItem('selectedLanguage', lang);
+  }
+  
 
 }

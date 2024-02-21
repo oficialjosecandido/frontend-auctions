@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/josecandido/.nvm/versions/node/v18.18.2/bin/node /Users/josecandido/.nvm/versions/node/v16.19.1/bin/yarn add popperjs
+  /Users/josecandido/.nvm/versions/node/v18.18.2/bin/node /Users/josecandido/.nvm/versions/node/v16.19.1/bin/yarn add ngx-boostrap
 
 PATH: 
   /Users/josecandido/.nvm/versions/node/v18.18.2/bin:/Users/josecandido/.nvm/versions/node/v16.19.1/bin:/opt/homebrew/bin:/Users/josecandido/.pyenv/shims:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/3.11/bin:/Library/Frameworks/Python.framework/Versions/3.10/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/Users/josecandido/.nvm/versions/node/v16.19.1/bin:/opt/homebrew/bin:/Users/josecandido/.pyenv/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/Library/Frameworks/Python.framework/Versions/3.11/bin:/Library/Frameworks/Python.framework/Versions/3.10/bin:/Users/josecandido/.rvm/bin:/Users/josecandido/.rvm/bin
@@ -14,7 +14,7 @@ Platform:
   darwin arm64
 
 Trace: 
-  Error: https://registry.npmjs.org/popperjs: Not found
+  Error: https://registry.npmjs.org/ngx-boostrap: Not found
       at params.callback [as _callback] (/Users/josecandido/.nvm/versions/node/v16.19.1/lib/node_modules/yarn/lib/cli.js:66145:18)
       at self.callback (/Users/josecandido/.nvm/versions/node/v16.19.1/lib/node_modules/yarn/lib/cli.js:140890:22)
       at Request.emit (node:events:517:28)
@@ -48,9 +48,9 @@ npm manifest:
       "@angular/platform-browser": "~16.1.5",
       "@angular/platform-browser-dynamic": "~16.1.5",
       "@angular/router": "~16.1.5",
+      "@popperjs/core": "^2.11.8",
       "bootstrap": "^5.3.0",
       "firebase": "^9.16.0",
-      "jquery": "^3.7.1",
       "rxjs": "~7.8.1",
       "tslib": "^2.6.0",
       "zone.js": "~0.13.1"
@@ -2082,6 +2082,11 @@ Lockfile:
     version "0.11.0"
     resolved "https://registry.yarnpkg.com/@pkgjs/parseargs/-/parseargs-0.11.0.tgz#a77ea742fab25775145434eb1d2328cf5013ac33"
     integrity sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==
+  
+  "@popperjs/core@^2.11.8":
+    version "2.11.8"
+    resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.8.tgz#6b79032e760a0899cd4204710beede972a3a185f"
+    integrity sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==
   
   "@protobufjs/aspromise@^1.1.1", "@protobufjs/aspromise@^1.1.2":
     version "1.1.2"
@@ -4691,11 +4696,6 @@ Lockfile:
     version "1.21.0"
     resolved "https://registry.yarnpkg.com/jiti/-/jiti-1.21.0.tgz#7c97f8fe045724e136a397f7340475244156105d"
     integrity sha512-gFqAIbuKyyso/3G2qhiO2OM6shY6EPP/R0+mkDbyspxKazh8BXDC5FiFsUjlczgdNz/vfra0da2y+aHrusLG/Q==
-  
-  jquery@^3.7.1:
-    version "3.7.1"
-    resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.7.1.tgz#083ef98927c9a6a74d05a6af02806566d16274de"
-    integrity sha512-m4avr8yL8kmFN8psrbFFFmB/If14iN5o9nw/NgnnM+kybDJpRsAynV2BsfpTYrTRysYUdADVD7CkUUizgkpLfg==
   
   js-tokens@^4.0.0:
     version "4.0.0"
