@@ -7,6 +7,7 @@ import * as auth from 'firebase/auth';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
 import { User } from '../auth/user';
+import { CustomerService } from '../shared/services/customer/customer.service';
 
 
 @Injectable({
@@ -19,7 +20,8 @@ export class AuthService {
     public afs: AngularFirestore, // Inject Firestore service
     public afAuth: AngularFireAuth, // Inject Firebase auth service
     public router: Router,
-    public ngZone: NgZone // NgZone service to remove outside scope warning
+    public ngZone: NgZone, // NgZone service to remove outside scope warning
+    public customerService: CustomerService
   ) {
     /* Saving user data in localstorage when 
     logged in and setting up null when logged out */
@@ -63,6 +65,7 @@ export class AuthService {
         /* Call the SendVerificaitonMail() function when new user sign 
         up and returns promise */
         this.SendVerificationMail();
+        this.customerService.createCustomer(result.user)
         this.SetUserData(result.user);
       })
       .catch((error) => {

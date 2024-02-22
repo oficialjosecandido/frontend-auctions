@@ -20,6 +20,7 @@ import { environment } from '../environments/environment';
 
 // routing
 import { AppRoutingModule } from './app-routing.module';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { AppRoutingModule } from './app-routing.module';
     AngularFireStorageModule,
     AngularFireDatabaseModule,
     AppRoutingModule,
+    AuthModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

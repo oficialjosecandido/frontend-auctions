@@ -23,6 +23,10 @@
         </li>
 
         <li class="nav-item">
+          <a class="nav-link" (click)="navigateTo('dashboard')">{{ 'DASHBOARD' | addPrefix: 'COMMONS.HEADER.' | translate }}</a>
+        </li>
+
+        <li class="nav-item">
           <div class="dropdown">
             <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               {{ selectedLanguageFlag() }} {{ selectedLanguageCode() }}
@@ -37,11 +41,8 @@
         </li>
 
         <li class="nav-item">
-          <button class="btn btn-light" *ngIf="!isLoggedIn" (click)="login()">
-            <i class="bx bx-user"></i> {{ 'login' | translate }}
-          </button>
-          <button class="btn btn-light" *ngIf="isLoggedIn" (click)="logout()">
-            <i class="bi bi-person"></i> {{ 'logout' | translate }}
+          <button class="btn btn-light" [ngClass]="{'logged-out': !isLoggedIn, 'logged-in': isLoggedIn}" (click)="toggleLogin()">
+            <i [class]="isLoggedIn ? 'bx bx-user-x' : 'bx bx-user'"></i> {{ isLoggedIn ? 'Logout' : 'Login' | translate }}
           </button>
         </li>
 

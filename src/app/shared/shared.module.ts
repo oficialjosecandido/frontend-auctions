@@ -7,7 +7,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { HttpClient } from '@angular/common/http'; // Make sure to import HttpClient
+import { HttpClient } from '@angular/common/http';
+import { AddPrefixPipe } from './pipes/add-prefix.pipe';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -16,7 +17,8 @@ export function createTranslateLoader(http: HttpClient) {
 @NgModule({
   declarations: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    AddPrefixPipe
   ],
   imports: [
     CommonModule,

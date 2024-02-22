@@ -6,6 +6,12 @@
     "contact": "Contact",
     "language": "Language",
 
+    "COMMONS": {
+      "HEADER": {
+         "DASHBOARD": "Dashboard"
+      }
+    },
+
     "AUTH":{
         "BACK_TO_SIGN_IN":"Back to <span>Sign In</span>",
         "COPYRIGHT_MESSAGE":"© 2017-2023 A-to-Be® All rights reserved. A-to-Be® is an international trademark of Brisa Innovation",
