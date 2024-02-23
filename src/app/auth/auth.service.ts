@@ -45,6 +45,7 @@ export class AuthService {
         this.SetUserData(result.user);
         this.afAuth.authState.subscribe((user) => {
           if (user && user.emailVerified) {
+            this.customerService.setCustomer(email);
             this.router.navigate(['dashboard']);
           } else {
             alert('Please verify email');

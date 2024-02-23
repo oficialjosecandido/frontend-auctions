@@ -1,0 +1,86 @@
+
+  
+    <!-- MAIN -->
+    <main>
+        <div class="head-title mt-4">
+          <div class="left">
+            <h1>Dashboard</h1>
+            <ul class="breadcrumb">
+              <li>
+                <a href="#">Dashboard</a>
+              </li>
+              <li><i class='bx bx-chevron-right' ></i></li>
+              <li>
+                March
+              </li>
+            </ul>
+          </div>
+          <a (click)="showWebsite()" class="btn-download">
+            <i class='bx bx-globe' ></i>
+            <span class="text">Ver o Site</span>
+          </a>
+        </div>
+    
+        <ul class="box-info">
+          <li>
+            <i class='bx bxs-tachometer' ></i>
+            <span class="text">
+              <h3>50</h3>
+              <p>Reservas Ativas</p>
+            </span>
+          </li>
+          <li>
+            <i class='bx bxs-food-menu' ></i>
+            <span class="text">
+              <h3>40</h3>
+              <p>Reservas deste Mês</p>
+            </span>
+          </li>
+          <li>
+            <i class='bx bx-euro' ></i>
+            <span class="text">
+              <h3>€30</h3>
+              <p>Receita Mensal</p>
+            </span>
+          </li>
+        </ul>
+    
+    
+        <div class="table-data">
+          <div class="order">
+            <div class="head">
+              <h3>Reservas de Fevereiro</h3>
+              <!-- <i class='bx bx-search' ></i>
+              <i class='bx bx-filter' ></i> -->
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th>Status</th>
+                  <th>Mota</th>
+                  <th>Início e Fim</th>
+                  <th>Pagamento</th>
+                  <th>Caução</th>
+                  <th>Como chegou</th>
+                  <th>Detalhes</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- <tr *ngFor="let booking of bookings">
+                  <td>{{ booking.name }}</td>
+                  <td ><span [ngClass]="getStatusColorClass(booking.status)">{{ booking.status }}</span> </td>
+                  <td><strong>{{ booking.mota }}</strong></td>
+                  <td>{{ booking.startDate }} - {{ booking.endDate }}</td>
+                  <td> <i class='bx bx-euro'></i> {{booking.payment}}</td>
+                  <td> <i class='bx bx-euro'></i> {{booking.deposit}}</td>
+                  <td> <i [ngClass]="getLeadingClass(booking.lead)"></i></td>
+                  <td><a (click)="openBookingDetails(booking.id)" style="cursor: pointer">...</a></td>
+                </tr> -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+      <!-- MAIN -->
+  
