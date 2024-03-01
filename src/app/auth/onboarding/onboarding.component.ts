@@ -37,6 +37,21 @@ export class OnboardingComponent {
 
   ngOnInit() {
     this.loadUser();
+    this.getCodes();
+    
+  }
+
+  private loadUser(): void {
+    const userString = localStorage.getItem('user');
+    if (userString) {
+      this.user = JSON.parse(userString);
+      this.profileForm.patchValue({
+        email: this.user.email
+      });
+    }
+  }
+
+  public getCodes(): void {
     this.countriesService.getPhoneCodes().subscribe((phoneCodes) => {
       this.countriesPhone = phoneCodes;
     });
@@ -46,29 +61,25 @@ export class OnboardingComponent {
     });
   }
 
-  loadUser() {
-    const userString = localStorage.getItem('user');
-    if (userString) {
-      this.user = JSON.parse(userString);
-      this.profileForm.patchValue({
-        email: this.user.email, // Set the email in the form
-      });
-    }
-  }
-
 
   onSubmit() {
     if (this.profileForm.valid) {
       const formData = this.profileForm.value;
-      // Your form submission logic here
       console.log(formData);
+
+      // prepare the form to the BE format
+      const customer = {
+        displayName: this.profileForm.get('name').value,
+      }
+
       this.customerService.createCustomer(formData).subscribe((response) => {
         console.log(response);
-        alert('customer created successfully');
+        alert('Customer Created Successfully');
         this.router.navigate(['dashboard']);
       })
     } else {
       // Handle form validation errors
+      alert('Something went wrong');
     }
   }
 

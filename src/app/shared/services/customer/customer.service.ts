@@ -29,15 +29,14 @@ export class CustomerService {
     // To store the customer object
     this.http.get<Customer>(`${this.apiUrl}get-customer/${email}`).subscribe(
       (customer: Customer) => {
-      console.log(customer);
-        localStorage.setItem('customer', JSON.stringify(customer));
+        console.log(customer);
+        localStorage.setItem('customer', JSON.stringify(customer)); // customer is onboarded
       },
       (error) => {
         if(error.status === 404) {
-          console.log('customer not enrolled', error)
-          this.router.navigate(['onboarding']);
+          console.log('customer not enrolled', error);
+          this.router.navigate(['onboarding']); // redirect user to onboarding to create customer
         }
-        // console.error('Error getting customer:', error);
       }
     );
     
