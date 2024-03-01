@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Customer } from './customer';
 
@@ -10,7 +11,7 @@ export class CustomerService {
 
   private apiUrl = 'http://127.0.0.1:8000/api/';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   public createCustomer(user) {
     console.log('create customer', user);
@@ -31,8 +32,6 @@ export class CustomerService {
   setCustomer(email) {
     // To clear the previous customer object
     localStorage.removeItem('customer');
-
-    // To store the customer object
     
     // To store the customer object
     this.http.get<Customer>(`${this.apiUrl}get-customer/${email}`).subscribe(
@@ -41,7 +40,11 @@ export class CustomerService {
         localStorage.setItem('customer', JSON.stringify(customer));
       },
       (error) => {
-        console.error('Error getting customer:', error);
+        if(error.status === 404) {
+          console.log('customer not enrolled', error)
+          this.router.navigate(['onboarding']);
+        }
+        // console.error('Error getting customer:', error);
       }
     );
     

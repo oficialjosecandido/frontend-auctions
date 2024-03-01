@@ -1,0 +1,4 @@
+[
+    { "code": "US", "name": "United States", "phoneCode": "+1" },
+    { "code": "CA", "name": "Canada", "phoneCode": "+1" }
+  ]

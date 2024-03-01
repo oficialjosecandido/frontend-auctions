@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6 mt-5 p-4 bg-light ">
+        <h3>Let's build your customer or seller profile</h3>
+        <form>
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+          </div>
+
+
+          <div class="mb-3">
+            <label for="phone" class="form-label">Phone number</label>
+            <div class="input-group">
+              <select class="form-select" id="countryCodePhone" required>
+                <option *ngFor="let country of countriesPhone" [value]="country.code">{{ country.name }}</option>
+              </select>
+              <input type="text" class="form-control" id="phone" placeholder="Your Phone Number" required>
+            </div>
+          </div>
+    
+          
+
+          <div class="mb-3">
+            <label for="vat" class="form-label">VAT number</label>
+            <div class="input-group">
+              <select class="form-select" id="countryCodeVAT" required>
+                <option *ngFor="let country of countriesVAT" [value]="country.code">{{ country.name }}</option>
+              </select>
+              <input type="text" class="form-control" id="vat" placeholder="Your VAT Number" required>
+            </div>
+          </div>
+
+
+          <!-- <div class="mb-3">
+            <label for="phone" class="form-label">Phone number</label>
+            <input type="text" class="form-control" id="phone" placeholder="Your Phone Number" required>
+          </div> -->
+          <div class="mb-3">
+            <label for="profilePicture" class="form-label">Profile Picture</label>
+            <input type="file" class="form-control" id="profilePicture" accept="image/*">
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Address</label>
+            <textarea class="form-control" id="message" rows="2" placeholder="Your Address" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+</div>
+  
