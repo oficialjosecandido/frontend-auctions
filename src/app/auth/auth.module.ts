@@ -8,6 +8,8 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { VerifyEmailComponent } from './verify-email/verify-email.component';
 import { HttpClientModule } from '@angular/common/http';
 import { OnboardingComponent } from './onboarding/onboarding.component';
+import { SharedModule } from '../shared/shared.module';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { OnboardingComponent } from './onboarding/onboarding.component';
   imports: [
     CommonModule,
     AuthRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    SharedModule,
+    ReactiveFormsModule
   ]
 })
 export class AuthModule { }
