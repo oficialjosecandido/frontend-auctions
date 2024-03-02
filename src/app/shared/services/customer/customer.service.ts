@@ -14,12 +14,18 @@ export class CustomerService {
   constructor(private http: HttpClient, private router: Router) { }
 
   public createCustomer(customer: Customer): Observable<Customer> {
-    console.log('create customer', customer);
 
-    const headers = new HttpHeaders({
-      'Content-Type': 'application/json',
-    });
-    return this.http.post<Customer>(this.apiUrl + 'create-customer', customer, {headers})
+    const formData = new FormData();
+      formData.append('display_name', customer.display_name);
+      formData.append('email', customer.email);
+      formData.append('id_number', customer.id_number);
+      formData.append('phone_number', customer.phone_number);
+      formData.append('billing_address', customer.billing_address);
+      formData.append('shipping_address', customer.shipping_address);
+      formData.append('profile_picture', customer.profile_picture);
+      formData.append('id_file', customer.id_file);
+
+    return this.http.post<Customer>(this.apiUrl + 'create-customer', formData)
   }
 
   setCustomer(email) {

@@ -23,15 +23,14 @@ export class OnboardingComponent {
     private router: Router
   ) {
     this.profileForm = this.fb.group({
-      name: ['', Validators.required],
+      displayName: ['', Validators.required],
       email: ['', Validators.required],
       countryCodePhone: ['', Validators.required],
       phone: ['', Validators.required],
-      countryCodeVAT: ['', Validators.required],
-      vat: ['', Validators.required],
+      id_number: ['', Validators.required],
+      address: ['', Validators.required],
       profilePicture: [null],
       idPicture: [null],
-      message: ['', Validators.required],
     });
   }
 
@@ -67,12 +66,17 @@ export class OnboardingComponent {
       const formData = this.profileForm.value;
       console.log(formData);
 
-      // prepare the form to the BE format
       const customer = {
-        displayName: this.profileForm.get('name').value,
+        display_name: this.profileForm.get('displayName').value,
+        email: this.profileForm.get('email').value,
+        phone_number: this.profileForm.get('countryCodePhone').value + this.profileForm.get('phone').value,
+        id_number: this.profileForm.get('id_number').value,
+        billing_address: this.profileForm.get('address').value,
+        shipping_address: this.profileForm.get('address').value,
+        profile_picture: this.profileForm.get('profilePicture').value, 
+        id_file: this.profileForm.get('idPicture').value,        
       }
-
-      this.customerService.createCustomer(formData).subscribe((response) => {
+      this.customerService.createCustomer(customer).subscribe((response) => {
         console.log(response);
         alert('Customer Created Successfully');
         this.router.navigate(['dashboard']);

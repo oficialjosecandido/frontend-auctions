@@ -6,7 +6,7 @@
       <form [formGroup]="profileForm" (submit)="onSubmit()">
         <div class="mb-3">
           <label for="name" class="form-label">Name</label>
-          <input type="text" class="form-control" id="name" placeholder="Your Name" formControlName="name" required>
+          <input type="text" class="form-control" id="name" placeholder="Your Name" formControlName="displayName" required>
         </div>
 
         <div class="mb-3">
@@ -18,19 +18,16 @@
           <label for="phone" class="form-label">Phone number</label>
           <div class="input-group">
             <select class="form-select" id="countryCodePhone" formControlName="countryCodePhone" required>
-              <option *ngFor="let country of countriesPhone" [value]="country.code">{{ country.name }}</option>
+              <option *ngFor="let country of countriesPhone" [value]="country.phoneCode">{{ country.name }}</option>
             </select>
             <input type="text" class="form-control" id="phone" placeholder="Your Phone Number" formControlName="phone" required>
           </div>
         </div>
 
         <div class="mb-3">
-          <label for="vat" class="form-label">VAT number</label>
+          <label for="vat" class="form-label">ID number</label>
           <div class="input-group">
-            <select class="form-select" id="countryCodeVAT" formControlName="countryCodeVAT" required>
-              <option *ngFor="let country of countriesVAT" [value]="country.code">{{ country.name }}</option>
-            </select>
-            <input type="text" class="form-control" id="vat" placeholder="Your VAT Number" formControlName="vat" required>
+            <input type="text" class="form-control" id="vat" placeholder="Your ID Number" formControlName="id_number" required>
           </div>
         </div>
 
@@ -46,7 +43,7 @@
 
         <div class="mb-3">
           <label for="message" class="form-label">Address</label>
-          <textarea class="form-control" id="message" rows="2" placeholder="Your Address" formControlName="message" required></textarea>
+          <textarea class="form-control" id="message" rows="2" placeholder="Your Address" formControlName="address" required></textarea>
         </div>
         
         <button type="submit" class="btn btn-primary">Submit</button>

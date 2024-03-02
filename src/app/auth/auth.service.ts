@@ -14,11 +14,11 @@ import { CustomerService } from '../shared/services/customer/customer.service';
   providedIn: 'root'
 })
 export class AuthService {
-  userData: any; // Save logged in user data
+  userData: any;
 
   constructor(
-    public afs: AngularFirestore, // Inject Firestore service
-    public afAuth: AngularFireAuth, // Inject Firebase auth service
+    public afs: AngularFirestore, 
+    public afAuth: AngularFireAuth,
     public router: Router,
     public ngZone: NgZone, // NgZone service to remove outside scope warning
     public customerService: CustomerService
@@ -66,7 +66,7 @@ export class AuthService {
         /* Call the SendVerificaitonMail() function when new user sign 
         up and returns promise */
         this.SendVerificationMail();
-        this.customerService.createCustomer(result.user)
+        // this.customerService.createCustomer(result.user)
         this.SetUserData(result.user);
       })
       .catch((error) => {
