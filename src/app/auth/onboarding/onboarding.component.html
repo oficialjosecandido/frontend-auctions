@@ -18,7 +18,7 @@
           <label for="phone" class="form-label">Phone number</label>
           <div class="input-group">
             <select class="form-select" id="countryCodePhone" formControlName="countryCodePhone" required>
-              <option *ngFor="let country of countriesPhone" [value]="country.phoneCode">{{ country.name }}</option>
+              <option *ngFor="let country of countriesPhone" [value]="country.dial_code">{{country.emoji}} {{ country.name }}</option>
             </select>
             <input type="text" class="form-control" id="phone" placeholder="Your Phone Number" formControlName="phone" required>
           </div>

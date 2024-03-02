@@ -1,0 +1,27 @@
+
+<div class="container mt-5">
+    <div class="card p-2">
+      
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-4">
+            <img src="{{customer.profile_picture}}" alt="{{customer.display_name}}" class="img-fluid rounded-circle">
+            <span><p>Trusted Buyer: {{customer.trusted_buyer}}</p></span>
+            <span><p>Trusted Seller: {{customer.trusted_seller}}</p></span>
+            <span><p>Buyer Stars: {{customer.buyer_stars}}</p></span>
+            <span><p>Seller Stars: {{customer.seller_stars}}</p></span>
+          </div>
+          <div class="col-md-8">
+            <h4>Name: {{customer.display_name}}</h4>
+            <br>
+            <p>Email: {{customer.email}}</p>
+            <p>Phone: {{customer.phone_number}}</p>
+            <p>Billing Address: {{customer.billing_address}}</p>
+            <p>Shipping Address: {{customer.shipping_address}}</p>
+            <p>Customer joined at: {{customer.created_date | date}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -28,6 +28,10 @@ export class CustomerService {
     return this.http.post<Customer>(this.apiUrl + 'create-customer', formData)
   }
 
+  public getCustomer(email: string): Observable<Customer> {
+    return this.http.get<Customer>(this.apiUrl + 'customer/' + email);
+  }
+
   setCustomer(email) {
     // To clear the previous customer object
     localStorage.removeItem('customer');

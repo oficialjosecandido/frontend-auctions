@@ -1,9 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 .bg-blue { background-color: #1988c5 !important;}
 
-
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
-
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +9,7 @@
 
 a {
   text-decoration: none!important;
+  cursor: pointer!important;
 }
 
 li {
@@ -67,6 +65,7 @@ body {
   transition: .3s ease;
   overflow-x: hidden;
   scrollbar-width: none;
+  background-color: #d6d2d2;
 }
 #sidebar::--webkit-scrollbar {
   display: none;
@@ -192,9 +191,9 @@ body {
   grid-gap: 24px;
   font-family: var(--lato);
   position: sticky;
-  margin-top: -50px;
   left: 0;
   z-index: 1000;
+  background-color: #AAAAAA;
 }
 #content nav::before {
   content: '';

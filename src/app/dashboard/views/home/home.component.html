@@ -1,7 +1,46 @@
 
-  
+  <main>
+    <div class="d-flex justify-content-center">
+      <div *ngIf="customer.status === 'Waiting 3rd Party Activation'" class="m-2 p-2 alert alert-danger text-center w-50" role="alert">
+        Your Customer profile is pending activation
+      </div>
+    </div>
+
+   <section class="d-flex justify-content-center text-center flex-wrap m-2">
+      <div class="cardio">
+        <h2><i class='bx bx-plus-circle'></i></h2>
+        <h4>Create Listing</h4>
+        <p class="p-2">Create Listing and wait for 3rd party activation</p>
+      </div>
+
+      <div class="cardio">
+        <h2><i class='bx bx-edit-alt' ></i></h2>
+        <h4>Manage Listing</h4>
+        <p class="p-2">Manage your listings and edit some info</p>
+      </div>
+
+      <div class="cardio">
+        <h2><i class='bx bx-cart-add'></i></h2>
+        <h4>TopUp Wallet</h4>
+        <p class="p-2">Increase your balance or withdraw your funds</p>
+      </div>
+
+      <div class="cardio">
+        <h2><i class='bx bxs-user-detail'></i></h2>
+        <h4>Edit Profile Info</h4>
+        <p class="p-2">Edit your personal info</p>
+      </div>
+
+      <div class="cardio">
+        <h2><i class='bx bx-question-mark' ></i></h2>
+        <h4>FAQs</h4>
+        <p class="p-2">Watch our FAQs page</p>
+      </div>
+   </section>
+
+  </main>
     <!-- MAIN -->
-    <main>
+    <!-- <main>
         <div class="head-title mt-4">
           <div class="left">
             <h1>Dashboard</h1>
@@ -50,8 +89,7 @@
           <div class="order">
             <div class="head">
               <h3>Reservas de Fevereiro</h3>
-              <!-- <i class='bx bx-search' ></i>
-              <i class='bx bx-filter' ></i> -->
+              
             </div>
             <table>
               <thead>
@@ -67,20 +105,11 @@
                 </tr>
               </thead>
               <tbody>
-                <!-- <tr *ngFor="let booking of bookings">
-                  <td>{{ booking.name }}</td>
-                  <td ><span [ngClass]="getStatusColorClass(booking.status)">{{ booking.status }}</span> </td>
-                  <td><strong>{{ booking.mota }}</strong></td>
-                  <td>{{ booking.startDate }} - {{ booking.endDate }}</td>
-                  <td> <i class='bx bx-euro'></i> {{booking.payment}}</td>
-                  <td> <i class='bx bx-euro'></i> {{booking.deposit}}</td>
-                  <td> <i [ngClass]="getLeadingClass(booking.lead)"></i></td>
-                  <td><a (click)="openBookingDetails(booking.id)" style="cursor: pointer">...</a></td>
-                </tr> -->
+                
               </tbody>
             </table>
           </div>
         </div>
-      </main>
+      </main> -->
       <!-- MAIN -->
   
