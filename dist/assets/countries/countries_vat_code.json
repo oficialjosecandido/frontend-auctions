@@ -1,0 +1,5 @@
+[
+    { "code": "US", "name": "United States", "vatCode": "US123456789" },
+    { "code": "CA", "name": "Canada", "vatCode": "CA987654321" }
+]
+  
